@@ -16,7 +16,7 @@ const ans2 = input.map(function (i) {
 
 console.log(ans2);
 
-// Filtering.
+// ....................................................Filtering.................................
 // Filter out even values
 // We pass it inside the filter function, no need to apply for loop or take any particular element, filter function will take care.
 const arr_input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
