@@ -15,6 +15,7 @@ const users = [
   },
 ];
 
+// To get POST request body parameters.
 app.use(express.json());
 
 app.get("/", (req, res) => {
