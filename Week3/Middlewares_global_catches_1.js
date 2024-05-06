@@ -34,6 +34,8 @@ function kidneyMiddleware(req, res, next) {
   }
 }
 
+
+// Functions are called in the order mentioned. and the next function is called by next() funtion.
 app.get("/health-checkup", userMiddleware, kidneyMiddleware, (req, res) => {
   // const username = req.headers.username;
   // const password = req.headers.password;
