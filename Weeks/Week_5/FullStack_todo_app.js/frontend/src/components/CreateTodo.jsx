@@ -34,7 +34,8 @@ export function CreateTodo() {
           fetch("http://localhost:4000/todos", {
             method: "POST",
             body: JSON.stringify({
-              // We create local state variable called title and for description (Further we use react query)
+              // We create local state variable called title and for description 
+              // (In future we use react query)
               title: title,
               description: description,
             }),
