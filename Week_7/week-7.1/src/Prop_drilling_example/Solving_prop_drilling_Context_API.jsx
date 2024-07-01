@@ -10,7 +10,8 @@ function Prop_drill_Solution() {
       Using countContext or CONTEXT API TO avoid PROP drilling......
       <br></br>
       <br></br>
-      {/* Use contextAPI defined in the context.jsx file, and wrapping whoever wants to use it. HERE Count is using for both the components below it*/}
+      {/* Use contextAPI defined in the context.jsx file, and wrapping whoever wants to use it. 
+      HERE Count is using for both the components below it*/}
       <CountContext.Provider value={{ count, setCount }}>
         <Count></Count>
       </CountContext.Provider>

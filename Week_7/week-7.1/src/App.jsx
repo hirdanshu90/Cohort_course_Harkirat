@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Prop_drill from "./Prop_drilling_example/Prop_drilling_ex";
-import Prop_drill_Solution from "./Prop_drilling_example/Solving_prop_drilling_Context_API";
+// import Prop_drill_Solution from "./Prop_drilling_example/Solving_prop_drilling_Context_API";
 
 // LAZY Loading.
 const Dashboard = lazy(() => import("./components/Dashboard"));
@@ -29,7 +29,6 @@ function App() {
       <Prop_drill></Prop_drill>
       <br></br>
       <br></br>
-      <Prop_drill_Solution></Prop_drill_Solution>
     </>
   );
 }
