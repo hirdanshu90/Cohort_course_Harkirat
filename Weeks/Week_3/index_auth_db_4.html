@@ -1,0 +1,30 @@
+<!-- API - https://fakerapi.it/api/v1/persons -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Using the .then() with fetch.
+      function getAnimalData() {
+        // By default it will be a GET request.
+        fetch("https://fakerapi.it/api/v1/persons").then(function (response) {
+          response.json().then(function (finaldata) {
+            console.log(finaldata);
+          });
+        });
+      }
+      // Can also write using async/await like this the above function.
+      async function getAnimalData2() {
+        const response = await fetch("https://fakerapi.it/api/v1/persons");
+        const finaldata = await response.json();
+        console.log(finaldata);
+      }
+    </script>
+    <button onclick="getAnimalData2()">Get animal data</button>
+  </body>
+</html>

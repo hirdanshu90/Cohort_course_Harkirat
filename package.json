@@ -11,6 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
-    "nodemon": "^3.1.0"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.3",
+    "nodemon": "^3.1.0",
+    "react-router-dom": "^6.23.1",
+    "recoil": "^0.7.7",
+    "zod": "^3.23.6"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
   }
 }

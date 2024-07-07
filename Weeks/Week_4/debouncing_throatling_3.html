@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum of 2 nums</title>
+  </head>
+    <script>
+      let timeout;
+      function debouncepopulateDiv(){
+        // This function will delay the call to populate div for say 100 sec. 
+        // This will ensure the functionality like, after we stop typing, then only request will be send to the backend server, rather that sending the request after every number typed.
+        clearTimeout(timeout);
+        timeout = setTimeout(function(){
+          populateDiv()
+        }, 1000); 
+      }
+
+      // Using Async await to call the backend and render the result using DOM.
+      async function populateDiv(){
+        const a = document.getElementById("firstnumber").value
+        const b = document.getElementById("secondnumber").value
+    
+        const response = await fetch("https://sum-server.100xdevs.com/sum?a=" + a + "&b=" + b)
+        const ans = await response.text()
+        document.getElementById("finalsum").innerHTML = ans
+      }
+    </script>
+  <body>
+    <input oninput = "debouncepopulateDiv()" id="firstnumber" type="text" placeholder="Enter your number 1"></input>
+    <br />
+    <br />
+    <input oninput="debouncepopulateDiv()" id="secondnumber" type="text" placeholder="Enter your number 2"></input>
+    <br />
+    <br />
+    <br />
+    <div id = "finalsum"></div>
+  </body>
+</html>

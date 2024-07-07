@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function addTodo() {
+        const title = document.getElementById("title").value;
+        const description = document.getElementById("text").value;
+        // document.createElement, this will create a div element, but that is not a part of DOM yet.
+        const childDiv = document.createElement("div");
+        // Now the child div that we made is added to the DOM.     
+        document.getElementById("container").appendChild(childDiv);
+      }
+    </script>
+  </head>
+  <body>
+    <input id="title" type="text" placeholder="Enter your task" />
+    <br />
+    <br />
+    <input id="text" type="text" placeholder="description" />
+    <br />
+    <br />
+    <button onclick="addTodo()">Add todo</button>
+    <br />
+    <br />
+    <div id="container"></div>
+  </body>
+</html>
