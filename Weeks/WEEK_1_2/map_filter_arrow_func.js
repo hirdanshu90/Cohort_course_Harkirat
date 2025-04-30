@@ -1,4 +1,4 @@
-// Map function
+2// Map function
 const input = [1, 2, 3, 4, 5];
 
 function transform(i) {
